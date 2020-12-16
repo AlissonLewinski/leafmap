@@ -58,4 +58,38 @@ module.exports = app => {
             .then(plants => res.json({ data: plants, count, limit }))
             .catch(err => res.status(500).send(err))
     }
+
+    const getByName = (req, res) => {
+        const name = req.params.name
+
+        app.db.raw(`SELECT plant.id, plant.name, plant.scientific_name, plant.content, plant.id_category FROM plant WHERE lower(unaccent(plant.name)) = lower(unaccent('${name}'))`)
+            .then(plant => {
+                res.json(plant.rows[0])
+            })
+            .catch(err => res.status(500).send(err))
+    }
+
+    const getByCategory = async (req, res) => {
+        const page = req.query.page || 1
+        const category = req.params.category
+
+        const result = await app.db.raw(`SELECT COUNT(plant.id) FROM plant
+            INNER JOIN category ON plant.id_category = category.id
+            WHERE lower(unaccent(category.name)) = lower(unaccent('${category}'));`)
+
+        const count = parseInt(result.rows[0].count)
+        if(count < 1) {
+            res.status(400).send('Categoria não encontrada')
+        }
+
+        app.db.raw(`SELECT plant.name, plant.img FROM plant
+            INNER JOIN category ON plant.id_category = category.id
+            WHERE lower(unaccent(category.name)) = lower(unaccent('${category}'))
+            LIMIT ${limit} OFFSET ${page * limit - limit};`)
+
+            .then(plants => res.json({ data: plants.rows, count, limit }))
+            .catch(err => res.status(500).send(err))
+    }
+
+    return {save, remove, get, getByName, getByCategory}
 }
