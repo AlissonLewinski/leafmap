@@ -1,5 +1,5 @@
 module.exports = app => {
-    const {existsOrError, notExistsOrError, equalsOrError} = app.api.validation
+    const {existsOrError} = app.api.validation
 
     const save = (req, res) => {
         const plant = { ...req.body }
@@ -59,6 +59,14 @@ module.exports = app => {
             .catch(err => res.status(500).send(err))
     }
 
+    const getById = (req, res) => {
+        app.db('plant')
+            .where({ id: req.params.id })
+            .first()
+            .then(plant => res.json(plant))
+            .catch(err => res.status(500).send(err))
+    }
+
     const getByName = (req, res) => {
         const name = req.params.name
 
@@ -91,5 +99,5 @@ module.exports = app => {
             .catch(err => res.status(500).send(err))
     }
 
-    return {save, remove, get, getByName, getByCategory}
+    return {save, remove, get, getById, getByName, getByCategory}
 }
