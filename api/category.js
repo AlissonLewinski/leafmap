@@ -27,18 +27,36 @@ module.exports = app => {
     }
 
     const remove = async (req, res) => {
-       
+        try {
+            existsOrError(req.params.id, 'Informe o id da categoria')
+
+            const plants = await app.db('plant')
+                .where({id_category: req.params.id})
+            notExistsOrError(plants, 'Categoria possui plantas, exclusão impossível')
+
+            const deletedRows = await app.db('category')
+                .where({id: req.params.id}).del()
+            existsOrError(deletedRows, 'Categoria não encontrada')
+
+            res.status(204).send()
+        } catch(msg) {
+            res.status(400).send(msg)
+        }
     }
 
     const get = (req, res) => {
-        
+        app.db('category')
+            .then(categories => res.json(categories))
+            .catch(err => res.status(500).send(err))
     }
 
     const getById = (req, res) => {
-        
+        app.db('category')
+            .where({id: req.params.id})
+            .first()
+            .then(category => res.json(category))
+            .catch(err => res.status(500).send(err))       
     }
-
-   
-
-    return { save, remove, get, getById}
+    
+    return {save, remove, get, getById}
 }

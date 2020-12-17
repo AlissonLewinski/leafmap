@@ -22,4 +22,16 @@ module.exports = app => {
         .get(app.api.plant.get)
         .post(app.config.passport.authenticate())
         .post(editor(app.api.plant.save))
+
+    //Categorias
+    app.route('/categorias/:id')
+        .all(app.config.passport.authenticate())
+        .get(editor(app.api.category.getById))
+        .put(editor(app.api.category.save))
+        .delete(editor(app.api.category.remove))
+
+    app.route('/categorias')
+        .get(app.api.category.get)
+        .post(app.config.passport.authenticate())
+        .post(editor(app.api.category.save))
 }
