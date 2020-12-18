@@ -1,5 +1,6 @@
 const admin = require('./admin')
 const editor = require('./editor')
+const accountOwnerOrAdmin = require('./accountOwnerOrAdmin')
 
 module.exports = app => {
     app.post('/signin', app.api.auth.signin)
@@ -34,4 +35,16 @@ module.exports = app => {
         .get(app.api.category.get)
         .post(app.config.passport.authenticate())
         .post(editor(app.api.category.save))
+
+    //Usuários
+    app.route('/usuarios/:id')
+        .all(app.config.passport.authenticate())
+        .get(accountOwnerOrAdmin(app.api.user.getById))
+        .put(admin(app.api.user.save))
+        .delete(admin(app.api.user.remove))
+
+    app.route('/usuarios')
+        .all(app.config.passport.authenticate())
+        .get(admin(app.api.user.get))
+        .post(admin(app.api.user.save))
 }
