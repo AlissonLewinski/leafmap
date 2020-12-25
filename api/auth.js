@@ -32,7 +32,7 @@ module.exports = app => {
             admin: user.admin,
             created_at: user.created_at,
             iat: now,
-            exp: now + (60 * 60 * 24 * 7)
+            exp: now + (60 * 60 * 24 * 15)
         }
 
         res.json({

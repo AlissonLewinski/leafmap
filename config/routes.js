@@ -47,4 +47,16 @@ module.exports = app => {
         .all(app.config.passport.authenticate())
         .get(admin(app.api.user.get))
         .post(admin(app.api.user.save))
+
+    //Artigos
+    app.route('/artigos/:id')
+        .all(app.config.passport.authenticate())
+        .get(editor(app.api.article.getById))
+        .put(editor(app.api.article.save))
+        .delete(editor(app.api.article.remove))
+
+    app.route('/artigos')
+        .get(app.api.article.get)
+        .post(app.config.passport.authenticate())
+        .post(editor(app.api.article.save))
 }
