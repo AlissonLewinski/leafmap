@@ -5,13 +5,21 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 15px 0 15px;
+    padding: 0 15px 0 8px;
 }
 
 .footer-description {
     font-size: 18px;
     color: var(--primary-color);
     font-weight: bold;
+
+    display: flex;
+    align-items: center;
+}
+
+.footer-flower {
+    height: 70px;
+    width: 70px;
 }
 
 .footer-icons {
