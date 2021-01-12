@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    align-items: center;
+    grid-area: header;
+
+    height: 80px;
+    border-bottom: solid 3px var(--primary-color);
+
+    padding-left: 15px;
+}
+
+.header-logo {    
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-logo-name {
+    color: var(--primary-color);
+    font-family: 'open-sans';
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.header-logo-cherry-blossom {
+    height: 60px;
+    width: 60px;
+    margin-right: 15px;
+}
