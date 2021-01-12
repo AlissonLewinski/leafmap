@@ -1,0 +1,28 @@
+.footer {
+    background-color: #E5E5E5;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px 0 15px;
+}
+
+.footer-description {
+    font-size: 18px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.footer-icons {
+    padding-top: 7px;
+}
+
+.footer-icon {
+    height: 50px;
+    width: 50px;
+}
+
+.footer-icon:first-child {
+    margin-right: 15px;
+}

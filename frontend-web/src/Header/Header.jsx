@@ -1,5 +1,5 @@
 import './Header.css';
-import { ReactComponent as CherryBlossom } from './assets/header-cherry-blossom.svg'
+import {ReactComponent as CherryBlossom} from './assets/header-cherry-blossom.svg'
 
 function Header() {
 	return (

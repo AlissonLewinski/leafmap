@@ -7,11 +7,16 @@
 	src: url("./assets/OpenSans-Regular.ttf");
 }
 
+* {
+	font-family: "open-sans";
+}
+
 body {
   	margin: 0;
 }
 
 .app {
+	min-height: 100vh;
   	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 80px 1fr 90px;
