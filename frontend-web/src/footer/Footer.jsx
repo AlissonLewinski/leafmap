@@ -1,5 +1,4 @@
 import './Footer.css';
-
 import {ReactComponent as RoseIcon} from './assets/flower.svg'
 import {ReactComponent as GithubIcon} from './assets/github.svg'
 import {ReactComponent as LinkedinIcon} from './assets/linkedin.svg'
@@ -12,8 +11,12 @@ function Footer() {
                 <span>Aplicação desenvolvida por Alisson Lewinski</span>
             </div>
             <div className="footer-icons">
-                <GithubIcon className="footer-icon"/>
-                <LinkedinIcon className="footer-icon"/>
+                <a href="https://github.com/AlissonLewinski" target="_new">
+                    <GithubIcon className="footer-icon"/>
+                </a>
+                <a href="https://www.linkedin.com/in/alissonlewinski/" target="_new">
+                    <LinkedinIcon className="footer-icon"/>
+                </a>
             </div>
 		</div>
 	);

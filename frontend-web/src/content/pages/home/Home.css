@@ -4,11 +4,13 @@
     justify-content: center;
 
     padding-top: 10vh;
+    padding-bottom: 5vh;
 }
 
 .home-content {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .home-content-info {
@@ -29,13 +31,17 @@
     color: var(--primary-color);
 }
 
+.home-content-info-link {
+    margin-top: 80px;
+}
+
 .home-content-info-btn {
     background-color: var(--primary-color);
     border: 0px;
     border-radius: 11px;
+    outline: none;
     height: 70px;
     width: 330px;
-    margin-top: 80px;
 
     color: white;
     font-size: 24px;

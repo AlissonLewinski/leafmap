@@ -1,0 +1,11 @@
+.plants-list {
+    height: 100%;
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 450px);
+    grid-gap: 0 15px;
+    justify-content: center;
+
+    margin: 40px 0 50px 0;
+}

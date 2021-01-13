@@ -45,7 +45,7 @@ module.exports = app => {
         }
     }
 
-    const limit = 10
+    const limit = 100
     const get = async (req, res) => {
         const page = req.query.page || 1
 
@@ -53,9 +53,9 @@ module.exports = app => {
         const count = parseInt(result.count)
 
         app.db('plant')
-            .select('id', 'name', 'img')
+            .select('id', 'name', 'plant.scientific_name', 'img')
             .limit(limit).offset(page * limit - limit)
-            .then(plants => res.json({ data: plants, count, limit }))
+            .then(plants => res.json({ plants: plants, count, limit }))
             .catch(err => res.status(500).send(err))
     }
 
@@ -95,7 +95,7 @@ module.exports = app => {
             WHERE lower(unaccent(category.name)) = lower(unaccent('${category}'))
             LIMIT ${limit} OFFSET ${page * limit - limit};`)
 
-            .then(plants => res.json({ data: plants.rows, count, limit }))
+            .then(plants => res.json({ plants: plants.rows, count, limit }))
             .catch(err => res.status(500).send(err))
     }
 

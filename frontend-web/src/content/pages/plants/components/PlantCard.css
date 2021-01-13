@@ -1,0 +1,55 @@
+.plant-card {
+    margin-bottom: 50px;
+    width: 400px;
+    height: 145px;
+    padding: 0 0 0px 25px;
+    
+    border-left: solid 3px var(--primary-color);
+    border-bottom: solid 3px var(--primary-color);
+    border-right: solid 3px var(--primary-color);
+
+    display: flex;
+    flex-direction: row;
+}
+
+.plant-card:hover {
+    cursor: pointer;
+    box-shadow: -3px 3px 0px 3px #ffa5c4;
+}
+
+.plant-card-img {
+    height: 120px;
+    min-width: 120px;
+
+    background-size: cover;
+    background-position: center center;
+}
+
+.plant-card-info {
+    flex-grow: 1;
+    max-height: 120px;
+    padding: 0 5px 0 7px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.plant-card-name, .plant-card-scientific-name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    text-align: center;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+
+.plant-card-name {
+    font-weight: bold;
+    margin-bottom: 12px;
+}
