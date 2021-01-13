@@ -1,5 +1,6 @@
 .footer {
     background-color: #E5E5E5;
+    border-top: solid 3px var(--primary-color);
     
     display: flex;
     flex-direction: row;

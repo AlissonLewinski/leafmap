@@ -1,0 +1,17 @@
+.category-link {
+    text-decoration: none;
+}
+
+.category-option {
+    margin-bottom: 15px;
+    padding: 7px 0 7px 0;
+    width: 190px;
+    border-right: solid 3px var(--primary-color);
+}
+
+.category-name {
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+}

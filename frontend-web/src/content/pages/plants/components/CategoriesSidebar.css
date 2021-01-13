@@ -1,29 +1,29 @@
 .categories-container {
     width: 300px;
     height: 100%;
-
+    
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1000;
-
+    
     border-right: solid 3px var(--primary-color);
     background-color: white;
+
+    overflow: hidden;
+    max-width: 300px;
+    transition: max-width 0.5s ease-in-out;
 }
 
 .categories-container-hidden {
-    display: none;
-}
-
-.categories-container-close-button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
+    max-width: 0;
+    pointer-events: none;
 }
 
 .categories-container-close-button {
-    margin: 11px 5px 0 0;
+    position: absolute;
+    top: 10px;
+    right: 5px;
 
     background-color: hsla(0, 0%, 100%, 0);
     border: none;
@@ -35,6 +35,20 @@
 }
 
 .categories-container-close-icon {
-    width: 50px;
-    height: 50px;
+    width: 32px;
+    height: 32px;
+}
+
+.categories-title {
+    margin-top: 25px;
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
