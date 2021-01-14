@@ -1,13 +1,16 @@
 .categories-container {
     width: 300px;
-    height: 100%;
+    height: auto;
+    max-height: 100%;
     
     position: absolute;
-    top: 0;
+    top: 50px;
     left: 0;
     z-index: 1000;
     
+    border-top: solid 3px var(--primary-color);
     border-right: solid 3px var(--primary-color);
+    border-bottom: solid 3px var(--primary-color);
     background-color: white;
 
     overflow: hidden;
@@ -47,8 +50,12 @@
 }
 
 .categories {
+    height: 500px;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    margin-bottom: 8px;
 }

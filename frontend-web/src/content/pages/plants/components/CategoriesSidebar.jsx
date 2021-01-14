@@ -10,8 +10,15 @@ function CategoriesSidebar(props) {
 
 	useEffect(() => {
 		fetchCategories()
-			.then(res => setCategories(res.data))
+			.then(res => {
+				setCategories([{name: 'Todas'}, ...res.data])
+			})
 	})
+
+	const onCategoryClick = (name) => {
+		props.onToggleClick()
+		props.onCategoryClick(name)
+	}
 
 	return (
 		<div className={`categories-container ${props.isVisible ? '' : 'categories-container-hidden'}`}>
@@ -21,7 +28,7 @@ function CategoriesSidebar(props) {
 			<h2 className="categories-title">Categorias</h2>
 			<div className="categories">
 				{categories.map(cat => (
-					<CategoryOption name={cat.name}/>
+					<CategoryOption name={cat.name} icon={cat.icon} key={cat.id} onCategoryClick={onCategoryClick}/>
 				))}
 			</div>
 		</div>

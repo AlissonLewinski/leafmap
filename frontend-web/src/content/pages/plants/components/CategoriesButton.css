@@ -6,11 +6,12 @@
     padding: 8px 6px 8px 6px;
 
     background-color: hsla(0, 0%, 100%, 0);
-    border: solid 1px var(--primary-color);
+    border: solid 3px var(--primary-color);
     border-radius: 7px;
     outline: none;
 
     font-size: 20px;
+    font-weight: bold;
     color: var(--primary-color);
 
     display: flex;

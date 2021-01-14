@@ -46,6 +46,7 @@ module.exports = app => {
 
     const get = (req, res) => {
         app.db('category')
+            .orderBy('name', 'asc')
             .then(categories => res.json(categories))
             .catch(err => res.status(500).send(err))
     }

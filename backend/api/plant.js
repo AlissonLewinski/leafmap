@@ -87,10 +87,10 @@ module.exports = app => {
 
         const count = parseInt(result.rows[0].count)
         if(count < 1) {
-            res.status(400).send('Categoria não encontrada')
+            res.status(200).send({plants: [], count, limit})
         }
 
-        app.db.raw(`SELECT plant.name, plant.img FROM plant
+        app.db.raw(`SELECT plant.id, plant.name, plant.img, plant.scientific_name FROM plant
             INNER JOIN category ON plant.id_category = category.id
             WHERE lower(unaccent(category.name)) = lower(unaccent('${category}'))
             LIMIT ${limit} OFFSET ${page * limit - limit};`)

@@ -2,11 +2,11 @@ import './PlantCard.css';
 
 function PlantCard(props) {
 
-    const img = 'https://construindodecor.com.br/wp-content/uploads/2019/05/flor-de-lotus-significado.jpg'
+    const defaultImg = 'https://construindodecor.com.br/wp-content/uploads/2019/05/flor-de-lotus-significado.jpg'
 
 	return (
         <div className="plant-card">
-            <div className="plant-card-img" style={{backgroundImage: `url(${props.img})`}}></div>
+            <div className="plant-card-img" style={{backgroundImage: `url(${props.img ? props.img : defaultImg})`}}></div>
             <div className="plant-card-info">
                 <span className="plant-card-name">
                     {props.name}
