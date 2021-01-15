@@ -13,7 +13,7 @@ function CategoriesSidebar(props) {
 			.then(res => {
 				setCategories([{name: 'Todas'}, ...res.data])
 			})
-	})
+	}, [])
 
 	const onCategoryClick = (name) => {
 		props.onToggleClick()

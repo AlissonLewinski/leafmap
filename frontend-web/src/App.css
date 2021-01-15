@@ -19,7 +19,7 @@ body {
 	min-height: 100vh;
   	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 80px 1fr 90px;
+	grid-template-rows: 80px 1fr auto;
 
 	grid-template-areas: 
 		'header'

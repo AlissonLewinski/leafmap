@@ -1,0 +1,25 @@
+.plant-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 7px 0 7px;
+}
+
+.plant-title, .plant-scientific-name {
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.plant-container p {
+    color: #757575;
+}
+
+.plant-container img {
+    max-width: 95vw;
+}
+
+@media(max-width: 500px) {
+    .plant-container p {
+        font-size: 12px;
+    }
+}

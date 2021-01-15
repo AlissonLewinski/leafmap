@@ -7,23 +7,36 @@ import CategoriesButton from './components/CategoriesButton';
 import PlantsList from './components/PlantsList';
 import { removeAccents } from '../../../util';
 
-function Plants() {
+function Plants(props) {
 
-	const path = window.location.pathname.substring(9)
+	const path = props.match.params.category
 
 	const [isSidebarVisible, setSidebarVisibility] = useState(false)
 	const [category, setCategory] = useState(path.substring(0,1).toUpperCase().concat(path.substring(1)))
 	const [plants, setPlants] = useState([])
 
+	const siteUrl = process.env.REACT_APP_SITE_URL
 	useEffect(() => {
 		fetchPlants(removeAccents(path.toLowerCase()))
-			.then(res => setPlants(res.data.plants))
+			.then(res => {
+				if(res.data.plants.length === 0) {
+					window.location.replace(`${process.env.REACT_APP_SITE_URL}`)
+				} else {
+					setPlants(res.data.plants)
+				}
+			})
 	}, [])
 
 	const handleCategoryClick = (name) => {
 		setCategory(name)
 		fetchPlants(removeAccents(name.toLowerCase()))
-			.then(res => setPlants(res.data.plants))
+			.then(res => {
+				if(res.data.plants.length === 0) {
+					window.location.replace(`${process.env.REACT_APP_SITE_URL}`)
+				} else {
+					setPlants(res.data.plants)
+				}
+			})
 	}
 
 	return (

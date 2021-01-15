@@ -11,7 +11,7 @@ function CategoryOption(props) {
     }
 
 	return (
-		<Link to={`/plantas/${props.name === 'Todas' ? '' : removeAccents(props.name.toLowerCase())}`} className="category-link" onClick={onLinkClick}>
+		<Link to={removeAccents(props.name.toLowerCase())} className="category-link" onClick={onLinkClick}>
             <div className="category-option">
                 <img src={props.icon ? props.icon : defaultIcon} alt="" height="32" width="32"/>
                 <h5 className="category-name">{props.name}</h5>

@@ -4,11 +4,20 @@
 }
 
 .category-link:hover {
-    background-color: yellow;
+    background-color: var(--primary-color);
+}
+
+.category-link:hover .category-name {
+    color: white;
+}
+
+.category-link:hover .category-option {
+    color: white;
+    border-right: solid 3px white;
 }
 
 .category-option {
-    padding: 4px 0 8px 0;
+    padding: 4px 0 8px 2px;
     width: 190px;
     border-right: solid 3px var(--primary-color);
 

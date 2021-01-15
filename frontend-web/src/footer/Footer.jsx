@@ -7,8 +7,8 @@ function Footer() {
 	return (
 		<div className="footer">
             <div className="footer-description">
-                <RoseIcon className="footer-flower"/>
-                <span>Aplicação desenvolvida por Alisson Lewinski</span>
+                <RoseIcon className="footer-description-flower"/>
+                <span className="footer-description-text">Aplicação desenvolvida por Alisson Lewinski</span>
             </div>
             <div className="footer-icons">
                 <a href="https://github.com/AlissonLewinski" target="_new">

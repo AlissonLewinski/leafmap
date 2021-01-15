@@ -1,3 +1,7 @@
+.plant-link {
+    text-decoration: none;
+}
+
 .plant-card {
     margin-bottom: 50px;
     width: 400px;
@@ -20,6 +24,7 @@
 .plant-card-img {
     height: 120px;
     min-width: 120px;
+    max-width: 120px;
 
     background-size: cover;
     background-position: center center;
@@ -52,4 +57,14 @@
 .plant-card-name {
     font-weight: bold;
     margin-bottom: 12px;
+}
+
+@media(max-width: 460px) {
+    .plant-card {
+        flex-direction: column;
+        align-items: center;
+        width: 80vw;
+        height: 200px;
+        margin: 0 auto 35px auto;
+    }
 }

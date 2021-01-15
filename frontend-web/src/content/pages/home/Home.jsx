@@ -10,7 +10,7 @@ function Home() {
 				<div className="home-content-info">
 					<span className="home-content-info-title">Leafmap</span>
 					<span className="home-content-info-description">Base de dados sobre Plantas</span>
-					<Link to="/plantas" className="home-content-info-link">
+					<Link to="/plantas/todas" className="home-content-info-link">
 						<button className="home-content-info-btn">Iniciar Navegação</button>
 					</Link>
 				</div>

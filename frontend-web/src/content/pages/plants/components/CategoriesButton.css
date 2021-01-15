@@ -39,3 +39,12 @@
 
     margin-right: 7px;
 }
+
+@media(max-width: 920px) {
+    .categories-open-button {
+        max-width: 255px;
+        position: unset;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+}

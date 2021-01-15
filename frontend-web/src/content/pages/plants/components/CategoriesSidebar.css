@@ -50,7 +50,7 @@
 }
 
 .categories {
-    height: 500px;
+    height: 730px;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;

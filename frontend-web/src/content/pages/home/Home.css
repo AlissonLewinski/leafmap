@@ -56,3 +56,32 @@
     width: 385px;
     height: 385px;
 }
+
+@media(max-width: 970px) {
+    .home-content-image {
+        display: none;
+    }
+
+    .home-content-info {
+        margin-top: 25px;
+        margin-right: 0;
+        align-items: center;
+    } 
+
+    .home-content-info-title, .home-content-info-description {
+        text-align: center;
+    }
+
+    .home-content-info-title {
+        font-size: 36px;
+    }
+
+    .home-content-info-description {
+        font-size: 22px;
+    }
+
+    .home-content-info-btn {
+        width: 230px;
+        font-size: 20px;
+    }
+}
