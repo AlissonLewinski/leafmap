@@ -43,12 +43,12 @@ function Plants(props) {
 	return (
 		<div className="content plants-page-container">
 			<CategoriesSidebar onToggleClick={e => setSidebarVisibility(!isSidebarVisible)} onCategoryClick={handleCategoryClick} isVisible={isSidebarVisible}/>
-			<div className="plants-list-container" onClick={e => setSidebarVisibility(!isSidebarVisible)}>
+			<div className="plants-list-container">
 				<CategoriesButton onToggleClick={e => setSidebarVisibility(!isSidebarVisible)} isVisible={!isSidebarVisible}/>
-				<div className="plants-list-title-container">
+				<div className="plants-list-title-container" onClick={e => setSidebarVisibility(false)}>
 					<h1 className="plants-list-title">{`Plantas ${category ? `- ${category}` : ''}`}</h1>
 				</div>
-				<PlantsList plants={plants}/>
+				<PlantsList plants={plants} handleClick={e => setSidebarVisibility(false)}/>
 			</div>
 		</div>
 	);
