@@ -36,7 +36,6 @@ function Plants(props) {
 					window.location.replace(`${process.env.REACT_APP_SITE_URL}/plantas/todas`)
 				} else {
 					setPlants(res.data.plants)
-					setCategory(path.substring(0,1).toUpperCase().concat(path.substring(1)))
 				}
 			})
 	}
