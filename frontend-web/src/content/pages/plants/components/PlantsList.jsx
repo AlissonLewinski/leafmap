@@ -1,4 +1,4 @@
-import PlantCard from './PlantCard';
+import PlantCard from './PlantCard.jsx';
 import './PlantsList.css';
 
 function PlantsList(props) {

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router'
 
-import Home from './pages/home/Home'
-import Plant from './pages/plant/Plant'
-import Plants from './pages/plants/Plants'
+import Home from './pages/home/Home.jsx'
+import Plant from './pages/plant/Plant.jsx'
+import Plants from './pages/plants/Plants.jsx'
 
 function Routes() {
     return (

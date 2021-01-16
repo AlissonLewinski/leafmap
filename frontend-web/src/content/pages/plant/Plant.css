@@ -10,8 +10,12 @@
     font-weight: bold;
 }
 
-.plant-container p {
-    color: #757575;
+.plant-container p, .plant-container span, .plant-container em, .plant-container li {
+    color: #757575 !important;
+}
+
+.plant-container a, .plant-container h1, .plant-container h2 {
+    color: var(--primary-color) !important;
 }
 
 .plant-container img {

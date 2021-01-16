@@ -2,9 +2,9 @@ import {useEffect, useState} from 'react';
 
 import './Plants.css';
 import { fetchPlants } from '../../../api';
-import CategoriesSidebar from './components/CategoriesSidebar'
-import CategoriesButton from './components/CategoriesButton';
-import PlantsList from './components/PlantsList';
+import CategoriesSidebar from './components/CategoriesSidebar.jsx'
+import CategoriesButton from './components/CategoriesButton.jsx';
+import PlantsList from './components/PlantsList.jsx';
 import { removeAccents } from '../../../util';
 
 function Plants(props) {

@@ -2,7 +2,7 @@ import './CategoriesSidebar.css';
 import {ReactComponent as CloseIcon} from '../assets/close.svg'
 import { useEffect, useState } from 'react';
 import { fetchCategories } from '../../../../api';
-import CategoryOption from './CategoryOption';
+import CategoryOption from './CategoryOption.jsx';
 
 function CategoriesSidebar(props) {
 

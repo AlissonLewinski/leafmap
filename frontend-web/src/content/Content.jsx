@@ -1,6 +1,6 @@
 import './Content.css'
 
-import Routes from './Routes'
+import Routes from './Routes.jsx'
 
 function Content() {
 	return (
