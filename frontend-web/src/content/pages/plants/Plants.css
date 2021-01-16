@@ -19,5 +19,12 @@
 .plants-list-title {
     font-size: 48px;
     font-weight: bold;
+    text-align: center;
     color: var(--primary-color);
+}
+
+@media(max-width: 460px) {
+    .plants-list-title {
+        font-size: 36px;
+    }   
 }

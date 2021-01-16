@@ -1,12 +1,14 @@
 .plant-link {
     text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
 
 .plant-card {
     margin-bottom: 50px;
     width: 400px;
     height: 145px;
-    padding: 0 0 0px 25px;
+    padding: 0 0 0 25px;
     
     border-left: solid 3px var(--primary-color);
     border-bottom: solid 3px var(--primary-color);
@@ -61,10 +63,38 @@
 
 @media(max-width: 460px) {
     .plant-card {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         width: 80vw;
-        height: 200px;
-        margin: 0 auto 35px auto;
+        max-width: 80vw;
+        height: 80px;
+        margin: 0 auto 18px auto;
+        padding-left: 10px;
+    }
+
+    .plant-card-img {
+        min-width: 64px;
+        max-width: 64px;
+        height: 64px;
+    }
+
+    .plant-card-name {
+        font-size: 20px;
+        margin-bottom: 3px;
+    }
+    .plant-card-scientific-name {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 950px) {
+    .plant-card {
+        width: 300px;
+    }
+}
+
+@media(max-width: 715px) {
+    .plant-card {
+        width: 80vw;
     }
 }
