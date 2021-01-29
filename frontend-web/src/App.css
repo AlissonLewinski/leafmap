@@ -1,5 +1,5 @@
 :root {
-	--primary-color: #4CAF50;
+	--primary-color: #12c55d;
 }
 
 @font-face {
@@ -7,8 +7,10 @@
 	src: url("./assets/OpenSans-Regular.ttf");
 }
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
 * {
-	font-family: "open-sans";
+	font-family: 'IBM Plex Mono', monospace;
 }
 
 body {
@@ -25,4 +27,8 @@ body {
 		'header'
 		'content'
 		'footer';
+}
+
+.hidden {
+	display: none;
 }

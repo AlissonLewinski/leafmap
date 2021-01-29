@@ -9,13 +9,13 @@ import { removeAccents } from '../../../util';
 
 function Plants(props) {
 
-	const path = props.match.params.category
+	const [path, setPath] = useState(props.match.params.category)
+	const siteUrl = process.env.REACT_APP_SITE_URL
 
 	const [isSidebarVisible, setSidebarVisibility] = useState(false)
 	const [category, setCategory] = useState('')
 	const [plants, setPlants] = useState([])
 
-	const siteUrl = process.env.REACT_APP_SITE_URL
 	useEffect(() => {
 		fetchPlants(removeAccents(path.toLowerCase()))
 			.then(res => {

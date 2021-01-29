@@ -1,0 +1,78 @@
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding: 30px 5% 0 5%;
+}
+
+.admin-container > h1 {
+    color: var(--primary-color);
+    text-align: center;
+    width: 100%;
+}
+
+.administrating-buttons-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.administrating-buttons-container button:first-child {
+    margin-right: 5px;
+}
+
+.admin-container button:not(.quill button) {
+    background-color: unset;
+    cursor: pointer;
+    outline: none;
+    min-width: 130px;
+    font-size: 14px;
+    padding: 7px;
+    margin-top: 5px;
+    border: solid 3px;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-normal {
+    border-color: var(--primary-color);
+    color:  var(--primary-color);
+}
+
+.button-highlight {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white;
+}
+
+.button-save {
+    border-color: #1642d3;
+    color: #1642d3;
+}
+
+.button-danger {
+    border-color: #ee2626;
+    color: #ee2626;
+}
+
+.admin-current {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.admin-input {
+    margin-top: 30px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}

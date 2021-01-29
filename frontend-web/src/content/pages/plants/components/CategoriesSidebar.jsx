@@ -1,8 +1,8 @@
-import './CategoriesSidebar.css';
+import './CategoriesSidebar.css'
 import {ReactComponent as CloseIcon} from '../assets/close.svg'
-import { useEffect, useState } from 'react';
-import { fetchCategories } from '../../../../api';
-import CategoryOption from './CategoryOption.jsx';
+import { useEffect, useState } from 'react'
+import { fetchCategories } from '../../../../api'
+import CategoryOption from './CategoryOption.jsx'
 
 function CategoriesSidebar(props) {
 
@@ -35,4 +35,4 @@ function CategoriesSidebar(props) {
 	);
 }
 
-export default CategoriesSidebar;
+export default CategoriesSidebar

@@ -1,0 +1,12 @@
+.category-icon {
+    height: 200px;
+    width: 200px;
+}
+
+.admin-input h3 {
+    color: var(--primary-color);
+}
+
+.button-input {
+    margin-top: 15px !important;
+}

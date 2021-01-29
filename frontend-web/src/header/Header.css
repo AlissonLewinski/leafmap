@@ -1,13 +1,14 @@
 .header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     grid-area: header;
 
     height: 80px;
     border-bottom: solid 3px var(--primary-color);
 
     box-sizing: border-box;
-    padding-left: 15px;
+    padding: 0 15px 0 15px;
 }
 
 .header-logo {    

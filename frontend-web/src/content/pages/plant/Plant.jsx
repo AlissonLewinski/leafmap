@@ -15,7 +15,7 @@ function Plant(props) {
         <div className="plant-container">
             <h1 className="plant-title">{plant.name}</h1>
             <h2 className="plant-scientific-name"><i>{plant.scientific_name}</i></h2>
-            <div className="content" dangerouslySetInnerHTML={{__html: plant.content}}>
+            <div className="content ql-editor" dangerouslySetInnerHTML={{__html: plant.content}}>
                 
             </div>
         </div>
